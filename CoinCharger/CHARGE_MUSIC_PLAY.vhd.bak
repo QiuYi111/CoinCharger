@@ -1,0 +1,46 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;  
+use IEEE.STD_LOGIC_ARITH.all;
+
+entity Director is  
+            port(
+            Director_i : IN STD_LOGIC; 
+            Director_o: OUT STD_LOGIC_VECTOR(11 downto 0)
+            );
+end Director;
+
+architecture music of Director is 
+signal count :integer:=0;
+signal Director_temp: STD_LOGIC_VECTOR(11 downto 0) :="000000000000";
+begin
+
+    process(Director_i)
+    begin
+        if(Director_i'EVENT and Director_i='1')then
+		  Director_o<="111011101110" AFTER 500ms;--低音1     
+        Director_o<="110101001101" AFTER 1s;--低音2
+        Director_o<="101111011010" AFTER 250ms;
+        Director_o<="101100101111" AFTER 250ms;
+        Director_o<="100111110111" AFTER 250ms;
+        Director_o<="100011100001" AFTER 250ms;
+        Director_o<="011111101001" AFTER 250ms;
+            
+        Director_o<="011101110111" AFTER 250ms;--中音1
+        Director_o<="011010100111" AFTER 250ms;
+        Director_o<="010111101101" AFTER 250ms;
+        Director_o<="010110011000" AFTER 250ms;
+        Director_o<="010011111100" AFTER 250ms;
+        Director_o<="010001110000" AFTER 250ms;
+        Director_o<="001111110100" AFTER 250ms;
+            
+        Director_o<="001110111100" AFTER 250ms;--高音1
+        Director_o<="001101010011" AFTER 250ms;
+        Director_o<="001011110110" AFTER 250ms;
+        Director_o<="001011001100" AFTER 250ms;
+        Director_o<="001001111110" AFTER 250ms;
+        Director_o<="001000111000" AFTER 250ms;
+        Director_o<="000111111010" AFTER 250ms;
+		  end if;
+		  end process;
+		  end music;
+		  

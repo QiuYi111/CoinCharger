@@ -1,0 +1,43 @@
+|Scanner
+clk_50 => \scan:n[0].CLK
+clk_50 => \scan:n[1].CLK
+clk_50 => \scan:n[2].CLK
+clk_50 => \scan:n[3].CLK
+clk_50 => \scan:n[4].CLK
+clk_50 => \scan:n[5].CLK
+clk_50 => \scan:n[6].CLK
+clk_50 => \scan:n[7].CLK
+clk_50 => \scan:n[8].CLK
+clk_50 => \scan:n[9].CLK
+clk_50 => \scan:n[10].CLK
+clk_50 => \scan:n[11].CLK
+clk_50 => \scan:n[12].CLK
+clk_50 => \scan:n[13].CLK
+clk_50 => \scan:n[14].CLK
+clk_50 => \scan:n[15].CLK
+clk_50 => \scan:n[16].CLK
+clk_50 => \scan:n[17].CLK
+clk_50 => \scan:n[18].CLK
+clk_50 => \scan:n[19].CLK
+clk_50 => \scan:n[20].CLK
+clk_50 => \scan:n[21].CLK
+clk_50 => \scan:n[22].CLK
+clk_50 => \scan:n[23].CLK
+clk_50 => \scan:n[24].CLK
+clk_50 => \scan:n[25].CLK
+clk_50 => \scan:n[26].CLK
+clk_50 => \scan:n[27].CLK
+clk_50 => \scan:n[28].CLK
+clk_50 => \scan:n[29].CLK
+clk_50 => \scan:n[30].CLK
+clk_50 => \scan:n[31].CLK
+clk_50 => r4~reg0.CLK
+clk_50 => r3~reg0.CLK
+clk_50 => r2~reg0.CLK
+clk_50 => r1~reg0.CLK
+r1 <= r1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r2 <= r2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r3 <= r3~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r4 <= r4~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

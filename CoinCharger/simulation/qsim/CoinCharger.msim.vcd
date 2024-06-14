@@ -1,0 +1,419 @@
+$comment
+	File created using the following command:
+		vcd file CoinCharger.msim.vcd -direction
+$end
+$date
+	Wed May 15 21:33:47 2024
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module coincharger_vhd_vec_tst $end
+$var wire 1 ! a $end
+$var wire 1 " a1 $end
+$var wire 1 # a8 $end
+$var wire 1 $ a15 $end
+$var wire 1 % b $end
+$var wire 1 & b2 $end
+$var wire 1 ' b9 $end
+$var wire 1 ( b16 $end
+$var wire 1 ) B23 $end
+$var wire 1 * c $end
+$var wire 1 + c1 $end
+$var wire 1 , c2 $end
+$var wire 1 - c3 $end
+$var wire 1 . c4 $end
+$var wire 1 / c5 $end
+$var wire 1 0 c10 $end
+$var wire 1 1 c17 $end
+$var wire 1 2 d $end
+$var wire 1 3 d4 $end
+$var wire 1 4 d11 $end
+$var wire 1 5 d18 $end
+$var wire 1 6 e $end
+$var wire 1 7 e5 $end
+$var wire 1 8 e12 $end
+$var wire 1 9 e19 $end
+$var wire 1 : f $end
+$var wire 1 ; f6 $end
+$var wire 1 < f13 $end
+$var wire 1 = f20 $end
+$var wire 1 > g $end
+$var wire 1 ? g7 $end
+$var wire 1 @ g14 $end
+$var wire 1 A g21 $end
+$var wire 1 B sing $end
+
+$scope module i1 $end
+$var wire 1 C gnd $end
+$var wire 1 D vcc $end
+$var wire 1 E unknown $end
+$var wire 1 F devoe $end
+$var wire 1 G devclrn $end
+$var wire 1 H devpor $end
+$var wire 1 I ww_devoe $end
+$var wire 1 J ww_devclrn $end
+$var wire 1 K ww_devpor $end
+$var wire 1 L ww_a $end
+$var wire 1 M ww_B23 $end
+$var wire 1 N ww_c1 $end
+$var wire 1 O ww_c2 $end
+$var wire 1 P ww_c4 $end
+$var wire 1 Q ww_c5 $end
+$var wire 1 R ww_b $end
+$var wire 1 S ww_c $end
+$var wire 1 T ww_d $end
+$var wire 1 U ww_e $end
+$var wire 1 V ww_f $end
+$var wire 1 W ww_g $end
+$var wire 1 X ww_a1 $end
+$var wire 1 Y ww_b2 $end
+$var wire 1 Z ww_c3 $end
+$var wire 1 [ ww_d4 $end
+$var wire 1 \ ww_e5 $end
+$var wire 1 ] ww_f6 $end
+$var wire 1 ^ ww_g7 $end
+$var wire 1 _ ww_a8 $end
+$var wire 1 ` ww_b9 $end
+$var wire 1 a ww_c10 $end
+$var wire 1 b ww_d11 $end
+$var wire 1 c ww_e12 $end
+$var wire 1 d ww_f13 $end
+$var wire 1 e ww_g14 $end
+$var wire 1 f ww_a15 $end
+$var wire 1 g ww_b16 $end
+$var wire 1 h ww_c17 $end
+$var wire 1 i ww_d18 $end
+$var wire 1 j ww_e19 $end
+$var wire 1 k ww_f20 $end
+$var wire 1 l ww_g21 $end
+$var wire 1 m ww_sing $end
+$var wire 1 n \B23~input_o\ $end
+$var wire 1 o \c1~input_o\ $end
+$var wire 1 p \c2~input_o\ $end
+$var wire 1 q \c4~input_o\ $end
+$var wire 1 r \c5~input_o\ $end
+$var wire 1 s \~QUARTUS_CREATED_GND~I_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+0/
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+1D
+xE
+1F
+1G
+1H
+1I
+1J
+1K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+xs
+$end
+#20000
+1)
+1M
+1n
+#40000
+0)
+0M
+0n
+#60000
+1)
+1+
+1,
+1M
+1N
+1O
+1p
+1o
+1n
+#80000
+0)
+0M
+0n
+#90000
+0+
+0N
+0o
+#100000
+1)
+1M
+1n
+#120000
+0)
+1+
+0,
+0M
+1N
+0O
+0p
+1o
+0n
+#140000
+1)
+1M
+1n
+#160000
+0)
+0+
+0M
+0N
+0o
+0n
+#170000
+1,
+1O
+1p
+#180000
+1)
+1M
+1n
+#200000
+0)
+1+
+0M
+1N
+1o
+0n
+#220000
+1)
+0,
+1M
+0O
+0p
+1n
+#240000
+0)
+0M
+0n
+#260000
+1)
+1M
+1n
+#270000
+0+
+0N
+0o
+#280000
+0)
+0M
+0n
+#300000
+1)
+1M
+1n
+#320000
+0)
+0M
+0n
+#340000
+1)
+1M
+1n
+#360000
+0)
+0M
+0n
+#380000
+1)
+1M
+1n
+#400000
+0)
+0M
+0n
+#420000
+1)
+1M
+1n
+#440000
+0)
+0M
+0n
+#460000
+1)
+1M
+1n
+#480000
+0)
+0M
+0n
+#500000
+1)
+1M
+1n
+#520000
+0)
+0M
+0n
+#540000
+1)
+1M
+1n
+#560000
+0)
+0M
+0n
+#580000
+1)
+1M
+1n
+#600000
+0)
+0M
+0n
+#620000
+1)
+1M
+1n
+#640000
+0)
+0M
+0n
+#660000
+1)
+1M
+1n
+#680000
+0)
+0M
+0n
+#700000
+1)
+1M
+1n
+#720000
+0)
+0M
+0n
+#740000
+1)
+1M
+1n
+#760000
+0)
+0M
+0n
+#780000
+1)
+1M
+1n
+#800000
+0)
+0M
+0n
+#820000
+1)
+1M
+1n
+#840000
+0)
+0M
+0n
+#860000
+1)
+1M
+1n
+#880000
+0)
+0M
+0n
+#900000
+1)
+1M
+1n
+#920000
+0)
+0M
+0n
+#940000
+1)
+1M
+1n
+#960000
+0)
+0M
+0n
+#980000
+1)
+1M
+1n
+#1000000

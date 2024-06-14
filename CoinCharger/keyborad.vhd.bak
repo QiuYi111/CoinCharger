@@ -1,0 +1,73 @@
+-- 标准的VHDL库
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- 假设实体名为keyboard
+entity keyborad is
+    port(
+        -- 行信号
+        r1, r2, r3, r4 : in STD_LOGIC;
+        -- 列信号
+        c1, c2, c3, c4 : in STD_LOGIC;
+        -- 按键输出信号
+        n0, n1, n2, n3, n4, n5, n6, n7, n8, n9 : out STD_LOGIC;
+        start, confirm, reset : out STD_LOGIC
+    );
+end entity;
+
+-- 架构名为behavior
+architecture behavior of keyborad is
+begin
+    -- 按键扫描的进程
+    process(r1, r2, r3, r4, c1, c2, c3, c4)
+    begin
+        -- 默认所有按键输出为'0'
+        n0 <= '0';
+        n1 <= '0';
+        n2 <= '0';
+        n3 <= '0';
+        n4 <= '0';
+        n5 <= '0';
+        n6 <= '0';
+        n7 <= '0';
+        n8 <= '0';
+        n9 <= '0';
+        start <= '0';
+        confirm <= '0';
+        reset <= '0';
+
+        -- 第4行按键逻辑
+        if r4 = '1' then
+            if c1 = '1' then start <= '1';
+            elsif c2 = '1' then n3 <= '1';
+            elsif c3 = '1' then n2 <= '1';
+            elsif c4 = '1' then n1 <= '1';
+            end if;
+        end if;
+
+        -- 第3行按键逻辑
+        if r3 = '1' then
+            if c4 = '1' then n4 <= '1';
+            elsif c3 = '1' then n5 <= '1';
+            elsif c2 = '1' then n6 <= '1';
+            elsif c1 = '1' then confirm <= '1';
+            end if;
+        end if;
+
+        -- 第2行按键逻辑
+        if r2 = '1' then
+            if c4 = '1' then n7 <= '1';
+            elsif c3 = '1' then n8 <= '1';
+            elsif c2 = '1' then n9 <= '1';
+            elsif c1 = '1' then reset <= '1';
+            end if;
+        end if;
+
+        -- 第1行按键逻辑
+        if r1 = '1' then
+            if c4 = '1' then n0 <= '1';
+            -- 第1行的第2、3、4列为空，无需操作
+            end if;
+        end if;
+    end process;
+end architecture behavior;

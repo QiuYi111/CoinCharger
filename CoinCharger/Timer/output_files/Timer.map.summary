@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Fri Jun 14 09:42:07 2024
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : Timer
+Top-level Entity Name : Timer
+Family : Cyclone IV GX
+Total logic elements : 88
+    Total combinational functions : 88
+    Dedicated logic registers : 52
+Total registers : 52
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

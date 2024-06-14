@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Administrator\Desktop\lastCoinCharger(1)\CoinCharger\Scanner\simulation\qsim
+vscanner
+Z1 !s100 P73m?mmN;VJ;DcdmUXm^E0
+Z2 Ic8N_Z`Y=HQ9?SBoB4;Y1>1
+Z3 VZBdMgNX?ZLz;WO4EB@BM;1
+Z4 dC:\Users\Administrator\Desktop\lastCoinCharger(1)\CoinCharger\Scanner\simulation\qsim
+Z5 w1718329174
+Z6 8Scanner.vo
+Z7 FScanner.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Scanner.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1718329174.966000
+Z12 !s107 Scanner.vo|
+!s101 -O0
+vscanner_vlg_check_tst
+!i10b 1
+Z13 !s100 KJ]QDoCOlXhi>0L;PN>871
+Z14 IU_4P>1R^kAMIGO_@ULcoa2
+Z15 Vj[3LZ[a[;1b=FPP[he3F`0
+R4
+R5
+Z16 8Scanner.vt
+Z17 FScanner.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z18 !s108 1718329175.001000
+Z19 !s107 Scanner.vt|
+Z20 !s90 -work|work|Scanner.vt|
+!s101 -O0
+R10
+vscanner_vlg_sample_tst
+!i10b 1
+Z21 !s100 hK6ZG]O^@@4CJRdlk9Une2
+Z22 IJZ6BCZ4obhT[<UQKZFCIz2
+Z23 VS7z^o_fiO7^d3PQJC0d9l1
+R4
+R5
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vscanner_vlg_vec_tst
+!i10b 1
+!s100 zc9_7F`[7U8zU`CGAFKLl1
+I4PT1oSh=m?dLeGf8IFRCo3
+Z24 VRNkKY8?bN8FjlTg;=7=`W0
+R4
+R5
+R16
+R17
+Z25 L0 233
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10

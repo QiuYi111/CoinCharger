@@ -1,0 +1,891 @@
+$comment
+	File created using the following command:
+		vcd file D_Controller.msim.vcd -direction
+$end
+$date
+	Fri Jun 14 09:32:07 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module D_Controller_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 4 " N_in [3:0] $end
+$var reg 1 # Reset $end
+$var wire 1 $ D_1 [3] $end
+$var wire 1 % D_1 [2] $end
+$var wire 1 & D_1 [1] $end
+$var wire 1 ' D_1 [0] $end
+$var wire 1 ( D_2 [3] $end
+$var wire 1 ) D_2 [2] $end
+$var wire 1 * D_2 [1] $end
+$var wire 1 + D_2 [0] $end
+$var wire 1 , sampler $end
+$scope module i1 $end
+$var wire 1 - gnd $end
+$var wire 1 . vcc $end
+$var wire 1 / unknown $end
+$var tri1 1 0 devclrn $end
+$var tri1 1 1 devpor $end
+$var tri1 1 2 devoe $end
+$var wire 1 3 Equal1~0_combout $end
+$var wire 1 4 D_1[0]~output_o $end
+$var wire 1 5 D_1[1]~output_o $end
+$var wire 1 6 D_1[2]~output_o $end
+$var wire 1 7 D_1[3]~output_o $end
+$var wire 1 8 D_2[0]~output_o $end
+$var wire 1 9 D_2[1]~output_o $end
+$var wire 1 : D_2[2]~output_o $end
+$var wire 1 ; D_2[3]~output_o $end
+$var wire 1 < clk~input_o $end
+$var wire 1 = clk~inputclkctrl_outclk $end
+$var wire 1 > Reset~input_o $end
+$var wire 1 ? N_in[0]~input_o $end
+$var wire 1 @ digit1~0_combout $end
+$var wire 1 A N_in[1]~input_o $end
+$var wire 1 B digit1~3_combout $end
+$var wire 1 C N_in[2]~input_o $end
+$var wire 1 D digit1~4_combout $end
+$var wire 1 E Equal2~0_combout $end
+$var wire 1 F N_in[3]~input_o $end
+$var wire 1 G digit1~5_combout $end
+$var wire 1 H prev_N_in[3]~feeder_combout $end
+$var wire 1 I Equal0~1_combout $end
+$var wire 1 J prev_N_in[3]~0_combout $end
+$var wire 1 K prev_N_in[1]~feeder_combout $end
+$var wire 1 L Equal0~0_combout $end
+$var wire 1 M clock_proc~0_combout $end
+$var wire 1 N digit2~0_combout $end
+$var wire 1 O digit2[0]~1_combout $end
+$var wire 1 P digit2~2_combout $end
+$var wire 1 Q digit2~3_combout $end
+$var wire 1 R digit1[0]~1_combout $end
+$var wire 1 S digit1[0]~2_combout $end
+$var wire 1 T digit1[3]~feeder_combout $end
+$var wire 1 U digit2~4_combout $end
+$var wire 1 V digit1 [3] $end
+$var wire 1 W digit1 [2] $end
+$var wire 1 X digit1 [1] $end
+$var wire 1 Y digit1 [0] $end
+$var wire 1 Z prev_N_in [3] $end
+$var wire 1 [ prev_N_in [2] $end
+$var wire 1 \ prev_N_in [1] $end
+$var wire 1 ] prev_N_in [0] $end
+$var wire 1 ^ digit2 [3] $end
+$var wire 1 _ digit2 [2] $end
+$var wire 1 ` digit2 [1] $end
+$var wire 1 a digit2 [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+0#
+0'
+0&
+0%
+0$
+0+
+0*
+0)
+0(
+x,
+0-
+1.
+x/
+10
+11
+12
+13
+04
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+1E
+0F
+0G
+0H
+1I
+0J
+0K
+1L
+1M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0Y
+0X
+0W
+0V
+0]
+0\
+0[
+0Z
+0a
+0`
+0_
+0^
+$end
+#10000
+1!
+1<
+1=
+0,
+#20000
+b1000 "
+b1100 "
+0!
+1C
+1F
+0<
+0=
+1,
+0I
+1D
+03
+1G
+0M
+1J
+1T
+1H
+1S
+#30000
+1!
+1<
+1=
+0,
+1Z
+1[
+1V
+1W
+1I
+1U
+0E
+1Q
+17
+16
+1$
+1%
+1M
+0J
+1O
+0S
+0O
+#40000
+0!
+0<
+0=
+1,
+#50000
+1!
+1<
+1=
+0,
+#60000
+0!
+0<
+0=
+1,
+#70000
+1!
+1<
+1=
+0,
+#80000
+0!
+0<
+0=
+1,
+#90000
+1!
+1<
+1=
+0,
+#100000
+b100 "
+b0 "
+0!
+0C
+0F
+0<
+0=
+1,
+0I
+0D
+13
+0G
+0T
+0H
+#110000
+1!
+1<
+1=
+0,
+#120000
+0!
+0<
+0=
+1,
+#130000
+1!
+1<
+1=
+0,
+#140000
+b10 "
+b11 "
+0!
+1?
+1A
+0<
+0=
+1,
+0L
+1@
+03
+1B
+0M
+1J
+1K
+1S
+1O
+#150000
+1!
+1<
+1=
+0,
+1\
+1]
+0Z
+0[
+1^
+0V
+1Y
+1_
+0W
+1X
+1L
+1I
+1R
+0U
+1N
+0Q
+1P
+1;
+07
+14
+1:
+06
+15
+1(
+0$
+1'
+1)
+0%
+1&
+1M
+0J
+0S
+0O
+#160000
+0!
+0<
+0=
+1,
+#170000
+1!
+1<
+1=
+0,
+#180000
+0!
+0<
+0=
+1,
+#190000
+1!
+1<
+1=
+0,
+#200000
+0!
+0<
+0=
+1,
+#210000
+1!
+1<
+1=
+0,
+#220000
+b1 "
+b0 "
+0!
+0?
+0A
+0<
+0=
+1,
+0L
+0@
+13
+0B
+0K
+#230000
+1!
+1<
+1=
+0,
+#240000
+0!
+0<
+0=
+1,
+#250000
+1!
+1<
+1=
+0,
+#260000
+0!
+0<
+0=
+1,
+#270000
+1!
+1<
+1=
+0,
+#280000
+b100 "
+b110 "
+0!
+1A
+1C
+0<
+0=
+1,
+1B
+03
+0I
+1D
+1K
+0M
+1J
+1S
+1O
+#290000
+1!
+1<
+1=
+0,
+0]
+1[
+0^
+0Y
+0_
+1`
+1a
+1W
+1L
+1I
+0N
+1Q
+0;
+04
+0:
+19
+18
+16
+0(
+0'
+0)
+1*
+1+
+1%
+1M
+0J
+0S
+0O
+#300000
+0!
+0<
+0=
+1,
+#310000
+1!
+1<
+1=
+0,
+#320000
+0!
+0<
+0=
+1,
+#330000
+1!
+1<
+1=
+0,
+#340000
+0!
+0<
+0=
+1,
+#350000
+1!
+1<
+1=
+0,
+#360000
+b10 "
+b0 "
+0!
+0A
+0C
+0<
+0=
+1,
+0L
+0B
+13
+0I
+0D
+0K
+#370000
+1!
+1<
+1=
+0,
+#380000
+1#
+0!
+1>
+0<
+0=
+1,
+1S
+0Q
+0P
+1O
+1J
+#390000
+1!
+1<
+1=
+0,
+0\
+0[
+0`
+0a
+0W
+0X
+1L
+1I
+0R
+1E
+09
+08
+06
+05
+0*
+0+
+0%
+0&
+#400000
+0#
+0!
+0>
+0<
+0=
+1,
+0S
+0O
+0J
+#410000
+1!
+1<
+1=
+0,
+#420000
+0!
+0<
+0=
+1,
+#430000
+1!
+1<
+1=
+0,
+#440000
+b1 "
+b11 "
+0!
+1?
+1A
+0<
+0=
+1,
+0L
+1@
+03
+1B
+0M
+1J
+1K
+1S
+#450000
+1!
+1<
+1=
+0,
+1\
+1]
+1Y
+1X
+1L
+1N
+0E
+1P
+14
+15
+1'
+1&
+1M
+0J
+1O
+0S
+0O
+#460000
+0!
+0<
+0=
+1,
+#470000
+1!
+1<
+1=
+0,
+#480000
+0!
+0<
+0=
+1,
+#490000
+1!
+1<
+1=
+0,
+#500000
+0!
+0<
+0=
+1,
+#510000
+1!
+1<
+1=
+0,
+#520000
+0!
+0<
+0=
+1,
+#530000
+1!
+1<
+1=
+0,
+#540000
+b10 "
+b0 "
+0!
+0?
+0A
+0<
+0=
+1,
+0L
+0@
+13
+0B
+0K
+#550000
+1!
+1<
+1=
+0,
+#560000
+0!
+0<
+0=
+1,
+#570000
+1!
+1<
+1=
+0,
+#580000
+0!
+0<
+0=
+1,
+#590000
+1!
+1<
+1=
+0,
+#600000
+0!
+0<
+0=
+1,
+#610000
+1!
+1<
+1=
+0,
+#620000
+b1 "
+0!
+1?
+0<
+0=
+1,
+1@
+03
+0M
+1J
+1S
+1O
+#630000
+1!
+1<
+1=
+0,
+0\
+1`
+1a
+0X
+1L
+1R
+0P
+19
+18
+05
+1*
+1+
+0&
+1M
+0J
+0S
+0O
+#640000
+0!
+0<
+0=
+1,
+#650000
+1!
+1<
+1=
+0,
+#660000
+0!
+0<
+0=
+1,
+#670000
+1!
+1<
+1=
+0,
+#680000
+0!
+0<
+0=
+1,
+#690000
+1!
+1<
+1=
+0,
+#700000
+0!
+0<
+0=
+1,
+#710000
+1!
+1<
+1=
+0,
+#720000
+0!
+0<
+0=
+1,
+#730000
+1!
+1<
+1=
+0,
+#740000
+0!
+0<
+0=
+1,
+#750000
+1!
+1<
+1=
+0,
+#760000
+b0 "
+0!
+0?
+0<
+0=
+1,
+0L
+0@
+13
+#770000
+1!
+1<
+1=
+0,
+#780000
+0!
+0<
+0=
+1,
+#790000
+1!
+1<
+1=
+0,
+#800000
+0!
+0<
+0=
+1,
+#810000
+1!
+1<
+1=
+0,
+#820000
+0!
+0<
+0=
+1,
+#830000
+1!
+1<
+1=
+0,
+#840000
+0!
+0<
+0=
+1,
+#850000
+1!
+1<
+1=
+0,
+#860000
+0!
+0<
+0=
+1,
+#870000
+1!
+1<
+1=
+0,
+#880000
+0!
+0<
+0=
+1,
+#890000
+1!
+1<
+1=
+0,
+#900000
+0!
+0<
+0=
+1,
+#910000
+1!
+1<
+1=
+0,
+#920000
+0!
+0<
+0=
+1,
+#930000
+1!
+1<
+1=
+0,
+#940000
+0!
+0<
+0=
+1,
+#950000
+1!
+1<
+1=
+0,
+#960000
+0!
+0<
+0=
+1,
+#970000
+1!
+1<
+1=
+0,
+#980000
+0!
+0<
+0=
+1,
+#990000
+1!
+1<
+1=
+0,
+#1000000

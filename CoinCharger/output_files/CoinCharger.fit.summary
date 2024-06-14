@@ -1,0 +1,18 @@
+Fitter Status : Successful - Thu May 23 21:34:18 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : CoinCharger
+Top-level Entity Name : CoinCharger
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 3,875 / 49,760 ( 8 % )
+    Total combinational functions : 3,356 / 49,760 ( 7 % )
+    Dedicated logic registers : 1,143 / 49,760 ( 2 % )
+Total registers : 1143
+Total pins : 39 / 360 ( 11 % )
+Total virtual pins : 0
+Total memory bits : 5,760 / 1,677,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

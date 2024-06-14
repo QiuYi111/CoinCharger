@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Administrator\Desktop\lastCoinCharger(1)\CoinCharger\mux\simulation\qsim
+vmux
+Z1 !s100 oRkf@DMn[805PMhAaPQK^3
+Z2 Igj96YLnO59bL^FSNJmSNc2
+Z3 VQCQ<05VWX>Nmee^djmVol1
+Z4 dC:\Users\Administrator\Desktop\lastCoinCharger(1)\CoinCharger\mux\simulation\qsim
+Z5 w1718328999
+Z6 8mux.vo
+Z7 Fmux.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|mux.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1718329000.122000
+Z12 !s107 mux.vo|
+!s101 -O0
+vmux_vlg_check_tst
+!i10b 1
+Z13 !s100 Bo[U]dCVZ[gSXVEKkn]BH1
+Z14 IT[nod`Do4I2Sa9[hV_i3O0
+Z15 V:f@jgg_GU0]=[@DJX2:>;1
+R4
+R5
+Z16 8mux.vt
+Z17 Fmux.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z18 !s108 1718329000.156000
+Z19 !s107 mux.vt|
+Z20 !s90 -work|work|mux.vt|
+!s101 -O0
+R10
+vmux_vlg_sample_tst
+!i10b 1
+Z21 !s100 f55ifYBRVQeIMl[Z0MXd:1
+Z22 Ioa=XnOO9^Qb<ok4H[OOJ_1
+Z23 ViUMjLHnP`J32i66NSR9T]0
+R4
+R5
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+vmux_vlg_vec_tst
+!i10b 1
+!s100 iVoni?MkKcKQLf[>h?NWg3
+I9P;1MBYS`?9VzbPnjPdNk1
+Z24 V=8nQnIn1KKR=fClWPAV0=2
+R4
+R5
+R16
+R17
+Z25 L0 209
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10

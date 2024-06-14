@@ -1,0 +1,27 @@
+# do Translate.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Translate
+# 
+# Top level modules:
+# 	Translate
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Translate_vlg_sample_tst
+# -- Compiling module Translate_vlg_check_tst
+# -- Compiling module Translate_vlg_vec_tst
+# 
+# Top level modules:
+# 	Translate_vlg_vec_tst
+# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.Translate_vlg_vec_tst 
+# Loading work.Translate_vlg_vec_tst
+# Loading work.Translate
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
+# Loading cycloneiv_ver.cycloneiv_clkctrl
+# Loading cycloneiv_ver.cycloneiv_mux41
+# Loading cycloneiv_ver.cycloneiv_ena_reg
+# Loading work.Translate_vlg_sample_tst
+# Loading work.Translate_vlg_check_tst
+# Simulation passed !
+# ** Note: $finish    : Translate.vt(310)
+#    Time: 1 us  Iteration: 0  Instance: /Translate_vlg_vec_tst/tb_out

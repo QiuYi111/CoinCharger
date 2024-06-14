@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Administrator\Desktop\lastCoinCharger(1)\CoinCharger\BtoD\simulation\qsim
+vBtoD
+Z1 I@Y]:0`WWzV7N@XRY<JOXh3
+Z2 Vbf4<UgABh3jI];djMSl_D0
+Z3 dC:\Users\Administrator\Desktop\lastCoinCharger(1)\CoinCharger\BtoD\simulation\qsim
+Z4 w1718328381
+Z5 8BtoD.vo
+Z6 FBtoD.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@bto@d
+!i10b 1
+Z10 !s100 INK=>IRAI=zQmLRoj1no60
+!s85 0
+Z11 !s108 1718328382.579000
+Z12 !s107 BtoD.vo|
+Z13 !s90 -work|work|BtoD.vo|
+!s101 -O0
+vBtoD_vlg_check_tst
+!i10b 1
+!s100 k1m9EC1D892>O3g?:H<;82
+IeBdJb:2iEKfcK:hab5WjM3
+V?lK1?9j<a9Y[D3]oFE3[R3
+R3
+R4
+Z14 8BtoD.vt
+Z15 FBtoD.vt
+L0 75
+R7
+r1
+!s85 0
+31
+Z16 !s108 1718328382.629000
+Z17 !s107 BtoD.vt|
+Z18 !s90 -work|work|BtoD.vt|
+!s101 -O0
+R8
+n@bto@d_vlg_check_tst
+vBtoD_vlg_sample_tst
+!i10b 1
+!s100 _jKJei?a8m7D3VmAoJ:6W1
+IbiAD8k]2869MFfPJc[^BQ2
+V2^IjzTZhoLj5`hLoYSN8_0
+R3
+R4
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+n@bto@d_vlg_sample_tst
+vBtoD_vlg_vec_tst
+!i10b 1
+!s100 OXnz?LAEA:Ja5Sg?YV65m0
+IKoHRiN>?6DUzF@bh`ZU3i0
+VoLi5jbITe23VebR:WO@aa3
+R3
+R4
+R14
+R15
+L0 223
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+n@bto@d_vlg_vec_tst

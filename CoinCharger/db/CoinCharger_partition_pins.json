@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "a",
+					"strict" : false
+				},
+				{
+					"name" : "b",
+					"strict" : false
+				},
+				{
+					"name" : "c",
+					"strict" : false
+				},
+				{
+					"name" : "d",
+					"strict" : false
+				},
+				{
+					"name" : "e",
+					"strict" : false
+				},
+				{
+					"name" : "f",
+					"strict" : false
+				},
+				{
+					"name" : "g",
+					"strict" : false
+				},
+				{
+					"name" : "a1",
+					"strict" : false
+				},
+				{
+					"name" : "b2",
+					"strict" : false
+				},
+				{
+					"name" : "c3",
+					"strict" : false
+				},
+				{
+					"name" : "d4",
+					"strict" : false
+				},
+				{
+					"name" : "e5",
+					"strict" : false
+				},
+				{
+					"name" : "f6",
+					"strict" : false
+				},
+				{
+					"name" : "g7",
+					"strict" : false
+				},
+				{
+					"name" : "a8",
+					"strict" : false
+				},
+				{
+					"name" : "b9",
+					"strict" : false
+				},
+				{
+					"name" : "c10",
+					"strict" : false
+				},
+				{
+					"name" : "d11",
+					"strict" : false
+				},
+				{
+					"name" : "e12",
+					"strict" : false
+				},
+				{
+					"name" : "f13",
+					"strict" : false
+				},
+				{
+					"name" : "g14",
+					"strict" : false
+				},
+				{
+					"name" : "a15",
+					"strict" : false
+				},
+				{
+					"name" : "b16",
+					"strict" : false
+				},
+				{
+					"name" : "c17",
+					"strict" : false
+				},
+				{
+					"name" : "d18",
+					"strict" : false
+				},
+				{
+					"name" : "e19",
+					"strict" : false
+				},
+				{
+					"name" : "f20",
+					"strict" : false
+				},
+				{
+					"name" : "g21",
+					"strict" : false
+				},
+				{
+					"name" : "clk_o",
+					"strict" : false
+				},
+				{
+					"name" : "R4",
+					"strict" : false
+				},
+				{
+					"name" : "R3",
+					"strict" : false
+				},
+				{
+					"name" : "R2",
+					"strict" : false
+				},
+				{
+					"name" : "R1",
+					"strict" : false
+				},
+				{
+					"name" : "B23",
+					"strict" : false
+				},
+				{
+					"name" : "c1",
+					"strict" : false
+				},
+				{
+					"name" : "c2",
+					"strict" : false
+				},
+				{
+					"name" : "c4",
+					"strict" : false
+				},
+				{
+					"name" : "c5",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

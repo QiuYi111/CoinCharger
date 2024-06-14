@@ -1,0 +1,779 @@
+Analysis & Synthesis report for CoinCharger
+Fri May 24 09:10:02 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis IP Cores Summary
+  7. Partition Status Summary
+  8. Partition for Top-Level Resource Utilization by Entity
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: DisCounter:DisCounter|lpm_divide:Div0
+ 14. Parameter Settings for Inferred Entity Instance: DisCounter:DisCounter|lpm_divide:Mod0
+ 15. Partition Dependent Files
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Source assignments for sld_signaltap:auto_signaltap_0
+ 18. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 19. Signal Tap Logic Analyzer Settings
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri May 24 09:10:02 2024           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; CoinCharger                                     ;
+; Top-level Entity Name              ; CoinCharger                                     ;
+; Family                             ; MAX 10                                          ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
+; UFM blocks                         ; N/A until Partition Merge                       ;
+; ADC blocks                         ; N/A until Partition Merge                       ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; CoinCharger        ; CoinCharger        ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                          ;
++--------------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                          ; Library     ;
++--------------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; Translate.vhd                                                      ; yes             ; User VHDL File                     ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd                                                      ;             ;
+; Timer.vhd                                                          ; yes             ; User VHDL File                     ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Timer.vhd                                                          ;             ;
+; switch.vhd                                                         ; yes             ; User VHDL File                     ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/switch.vhd                                                         ;             ;
+; Scanner.vhd                                                        ; yes             ; User VHDL File                     ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Scanner.vhd                                                        ;             ;
+; mux.vhd                                                            ; yes             ; User VHDL File                     ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/mux.vhd                                                            ;             ;
+; keyborad.vhd                                                       ; yes             ; User VHDL File                     ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd                                                       ;             ;
+; CoinCharger.bdf                                                    ; yes             ; User Block Diagram/Schematic File  ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/CoinCharger.bdf                                                    ;             ;
+; discounter.vhd                                                     ; yes             ; Auto-Found VHDL File               ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/discounter.vhd                                                     ;             ;
+; d_controller.vhd                                                   ; yes             ; Auto-Found VHDL File               ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/d_controller.vhd                                                   ;             ;
+; btod.vhd                                                           ; yes             ; Auto-Found VHDL File               ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/btod.vhd                                                           ;             ;
+; to2.vhd                                                            ; yes             ; Auto-Found VHDL File               ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/to2.vhd                                                            ;             ;
+; coin.vhd                                                           ; yes             ; Auto-Found VHDL File               ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/coin.vhd                                                           ;             ;
+; m1.vhd                                                             ; yes             ; Auto-Found VHDL File               ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/m1.vhd                                                             ;             ;
+; charge_music_play.vhd                                              ; yes             ; Auto-Found VHDL File               ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/charge_music_play.vhd                                              ;             ;
+; true_four_4_pai.vhd                                                ; yes             ; Auto-Found VHDL File               ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/true_four_4_pai.vhd                                                ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_signaltap.vhd                                                           ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                      ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_ela_control.vhd                                                         ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                            ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_constant.inc                                                            ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/dffeea.inc                                                                  ;             ;
+; aglobal181.inc                                                     ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/aglobal181.inc                                                              ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                               ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                      ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                              ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                       ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                 ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                              ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                               ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/altrom.inc                                                                  ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/altram.inc                                                                  ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/altdpram.inc                                                                ;             ;
+; db/altsyncram_vf14.tdf                                             ; yes             ; Auto-Generated Megafunction        ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/altsyncram_vf14.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/altdpram.tdf                                                                ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/others/maxplus2/memmodes.inc                                                              ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/a_hdffe.inc                                                                 ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                         ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/altsyncram.inc                                                              ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                 ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/muxlut.inc                                                                  ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/bypassff.inc                                                                ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/altshift.inc                                                                ;             ;
+; db/mux_h7c.tdf                                                     ; yes             ; Auto-Generated Megafunction        ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/mux_h7c.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_decode.tdf                                                              ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/declut.inc                                                                  ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_compare.inc                                                             ;             ;
+; db/decode_6af.tdf                                                  ; yes             ; Auto-Generated Megafunction        ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/decode_6af.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                             ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                             ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/cmpconst.inc                                                                ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/lpm_counter.inc                                                             ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                       ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                     ;             ;
+; db/cntr_brh.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cntr_brh.tdf                                                    ;             ;
+; db/cmpr_irb.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cmpr_irb.tdf                                                    ;             ;
+; db/cntr_8hi.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cntr_8hi.tdf                                                    ;             ;
+; db/cntr_0rh.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cntr_0rh.tdf                                                    ;             ;
+; db/cmpr_grb.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cmpr_grb.tdf                                                    ;             ;
+; db/cntr_sdi.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cntr_sdi.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                              ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                               ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                           ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_hub.vhd                                                                 ; altera_sld  ;
+; db/ip/sld5b11b44d/alt_sld_fab.v                                    ; yes             ; Encrypted Altera IP File           ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Altera IP File           ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File  ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Altera IP File           ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Altera IP File           ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Altera IP File           ; D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction             ; d:/myapps/apps/quatus18.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                            ;             ;
++--------------------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                              ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                                  ; IP Include File ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |CoinCharger|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |CoinCharger|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |CoinCharger|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |CoinCharger|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |CoinCharger|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
++--------------------------------------------------------------------+
+; Partition Status Summary                                           ;
++--------------------------------+-------------+---------------------+
+; Partition Name                 ; Synthesized ; Reason              ;
++--------------------------------+-------------+---------------------+
+; Top                            ; no          ; No relevant changes ;
+; sld_signaltap:auto_signaltap_0 ; no          ; No relevant changes ;
+; sld_hub:auto_hub               ; no          ; No relevant changes ;
++--------------------------------+-------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                                                                                                                                                           ;
++------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                             ; Entity Name     ; Library Name ;
++------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |CoinCharger                             ; 2786 (0)            ; 240 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger                                                                                                                    ; CoinCharger     ; work         ;
+;    |BtoD:BtoD|                           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|BtoD:BtoD                                                                                                          ; BtoD            ; work         ;
+;    |Coin:Coin1|                          ; 17 (17)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|Coin:Coin1                                                                                                         ; Coin            ; work         ;
+;    |D_Controller:D_Controller|           ; 20 (20)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|D_Controller:D_Controller                                                                                          ; D_Controller    ; work         ;
+;    |DisCounter:DisCounter|               ; 2441 (276)          ; 73 (73)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter                                                                                              ; DisCounter      ; work         ;
+;       |lpm_divide:Div0|                  ; 485 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
+;          |lpm_divide_fbo:auto_generated| ; 485 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter|lpm_divide:Div0|lpm_divide_fbo:auto_generated                                                ; lpm_divide_fbo  ; work         ;
+;             |abs_divider_kbg:divider|    ; 485 (36)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg ; work         ;
+;                |alt_u_div_she:divider|   ; 449 (449)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter|lpm_divide:Div0|lpm_divide_fbo:auto_generated|abs_divider_kbg:divider|alt_u_div_she:divider  ; alt_u_div_she   ; work         ;
+;       |lpm_divide:Mod0|                  ; 1680 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
+;          |lpm_divide_25o:auto_generated| ; 1680 (0)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter|lpm_divide:Mod0|lpm_divide_25o:auto_generated                                                ; lpm_divide_25o  ; work         ;
+;             |abs_divider_4dg:divider|    ; 1680 (64)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg ; work         ;
+;                |alt_u_div_ske:divider|   ; 1566 (1566)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|alt_u_div_ske:divider  ; alt_u_div_ske   ; work         ;
+;                |lpm_abs_8b9:my_abs_num|  ; 50 (50)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|DisCounter:DisCounter|lpm_divide:Mod0|lpm_divide_25o:auto_generated|abs_divider_4dg:divider|lpm_abs_8b9:my_abs_num ; lpm_abs_8b9     ; work         ;
+;    |M1:M1-1|                             ; 11 (11)             ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|M1:M1-1                                                                                                            ; M1              ; work         ;
+;    |TO2:TO1|                             ; 9 (9)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|TO2:TO1                                                                                                            ; TO2             ; work         ;
+;    |TO2:TO2|                             ; 9 (9)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|TO2:TO2                                                                                                            ; TO2             ; work         ;
+;    |Timer:Timer|                         ; 88 (88)             ; 52 (52)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|Timer:Timer                                                                                                        ; Timer           ; work         ;
+;    |Translate:Tran3|                     ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|Translate:Tran3                                                                                                    ; Translate       ; work         ;
+;    |Translate:Trans1|                    ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|Translate:Trans1                                                                                                   ; Translate       ; work         ;
+;    |Translate:Trans2|                    ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|Translate:Trans2                                                                                                   ; Translate       ; work         ;
+;    |Translate:Trans4|                    ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|Translate:Trans4                                                                                                   ; Translate       ; work         ;
+;    |keyborad:keyborad|                   ; 71 (71)             ; 34 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|keyborad:keyborad                                                                                                  ; keyborad        ; work         ;
+;    |mux:mux1|                            ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|mux:mux1                                                                                                           ; mux             ; work         ;
+;    |scanner:Scanner|                     ; 50 (50)             ; 36 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|scanner:Scanner                                                                                                    ; scanner         ; work         ;
+;    |switch:switch1|                      ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|switch:switch1                                                                                                     ; switch          ; work         ;
+;    |switch:switch2|                      ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CoinCharger|switch:switch2                                                                                                     ; switch          ; work         ;
++------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                      ;
++-----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal       ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------+------------------------+
+; Translate:Trans1|a                                  ; Translate:Trans1|Mux7     ; yes                    ;
+; Translate:Trans1|b                                  ; Translate:Trans1|Mux7     ; yes                    ;
+; Translate:Trans1|c                                  ; Translate:Trans1|Mux7     ; yes                    ;
+; Translate:Trans1|d                                  ; Translate:Trans1|Mux7     ; yes                    ;
+; Translate:Trans1|e                                  ; Translate:Trans1|Mux7     ; yes                    ;
+; Translate:Trans1|f                                  ; Translate:Trans1|Mux7     ; yes                    ;
+; Translate:Trans1|g                                  ; Translate:Trans1|Mux7     ; yes                    ;
+; Translate:Trans2|a                                  ; Translate:Trans2|Mux7     ; yes                    ;
+; Translate:Trans2|b                                  ; Translate:Trans2|Mux7     ; yes                    ;
+; Translate:Trans2|c                                  ; Translate:Trans2|Mux7     ; yes                    ;
+; Translate:Trans2|d                                  ; Translate:Trans2|Mux7     ; yes                    ;
+; Translate:Trans2|e                                  ; Translate:Trans2|Mux7     ; yes                    ;
+; Translate:Trans2|f                                  ; Translate:Trans2|Mux7     ; yes                    ;
+; Translate:Trans2|g                                  ; Translate:Trans2|Mux7     ; yes                    ;
+; Translate:Tran3|a                                   ; Translate:Tran3|Mux7      ; yes                    ;
+; Translate:Tran3|b                                   ; Translate:Tran3|Mux7      ; yes                    ;
+; Translate:Tran3|c                                   ; Translate:Tran3|Mux7      ; yes                    ;
+; Translate:Tran3|d                                   ; Translate:Tran3|Mux7      ; yes                    ;
+; Translate:Tran3|e                                   ; Translate:Tran3|Mux7      ; yes                    ;
+; Translate:Tran3|f                                   ; Translate:Tran3|Mux7      ; yes                    ;
+; Translate:Tran3|g                                   ; Translate:Tran3|Mux7      ; yes                    ;
+; Translate:Trans4|a                                  ; Translate:Trans4|Mux7     ; yes                    ;
+; Translate:Trans4|b                                  ; Translate:Trans4|Mux7     ; yes                    ;
+; Translate:Trans4|c                                  ; Translate:Trans4|Mux7     ; yes                    ;
+; Translate:Trans4|d                                  ; Translate:Trans4|Mux7     ; yes                    ;
+; Translate:Trans4|e                                  ; Translate:Trans4|Mux7     ; yes                    ;
+; Translate:Trans4|f                                  ; Translate:Trans4|Mux7     ; yes                    ;
+; Translate:Trans4|g                                  ; Translate:Trans4|Mux7     ; yes                    ;
+; keyborad:keyborad|reset                             ; keyborad:keyborad|reset   ; yes                    ;
+; keyborad:keyborad|N9                                ; keyborad:keyborad|N9      ; yes                    ;
+; keyborad:keyborad|N8                                ; keyborad:keyborad|N8      ; yes                    ;
+; keyborad:keyborad|N7                                ; keyborad:keyborad|N7      ; yes                    ;
+; keyborad:keyborad|N6                                ; keyborad:keyborad|N6      ; yes                    ;
+; keyborad:keyborad|N5                                ; keyborad:keyborad|N5      ; yes                    ;
+; keyborad:keyborad|N4                                ; keyborad:keyborad|N4      ; yes                    ;
+; keyborad:keyborad|N1                                ; keyborad:keyborad|N1      ; yes                    ;
+; keyborad:keyborad|N2                                ; keyborad:keyborad|N2      ; yes                    ;
+; keyborad:keyborad|N3                                ; keyborad:keyborad|N3      ; yes                    ;
+; keyborad:keyborad|N0                                ; scanner:Scanner|r1        ; yes                    ;
+; keyborad:keyborad|start                             ; keyborad:keyborad|start   ; yes                    ;
+; keyborad:keyborad|confirm                           ; keyborad:keyborad|confirm ; yes                    ;
+; Number of user-specified and inferred latches = 41  ;                           ;                        ;
++-----------------------------------------------------+---------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++---------------------------------------------+-------------------------------------------------------------+
+; Register name                               ; Reason for Removal                                          ;
++---------------------------------------------+-------------------------------------------------------------+
+; CHARGE_MUSIC_PLAY:CMF1|Director_temp[0..11] ; Stuck at GND due to stuck port clock_enable                 ;
+; CHARGE_MUSIC_PLAY:CMF1|count[0..31]         ; Stuck at GND due to stuck port clock_enable                 ;
+; TO2:TO3|clk_temp                            ; Lost fanout                                                 ;
+; true_four_4_pai:TF41|count[0]               ; Lost fanout                                                 ;
+; true_four_4_pai:TF41|clk_temp               ; Lost fanout                                                 ;
+; true_four_4_pai:TF41|count[1..4]            ; Lost fanout                                                 ;
+; TO2:TO3|count[0..4]                         ; Lost fanout                                                 ;
+; DisCounter:DisCounter|countdown_enable      ; Merged with DisCounter:DisCounter|\countdown:update_display ;
+; Total Number of Removed Registers = 57      ;                                                             ;
++---------------------------------------------+-------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                               ;
++-------------------------------+--------------------+--------------------------------------------------------------------------------------+
+; Register name                 ; Reason for Removal ; Registers Removed due to This Register                                               ;
++-------------------------------+--------------------+--------------------------------------------------------------------------------------+
+; TO2:TO3|clk_temp              ; Lost Fanouts       ; true_four_4_pai:TF41|clk_temp, true_four_4_pai:TF41|count[1],                        ;
+;                               ;                    ; true_four_4_pai:TF41|count[2], TO2:TO3|count[1], TO2:TO3|count[2], TO2:TO3|count[3], ;
+;                               ;                    ; TO2:TO3|count[4]                                                                     ;
+; true_four_4_pai:TF41|count[0] ; Lost Fanouts       ; true_four_4_pai:TF41|count[3], true_four_4_pai:TF41|count[4]                         ;
++-------------------------------+--------------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CoinCharger|D_Controller:D_Controller|digit2[0]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CoinCharger|D_Controller:D_Controller|digit1[0]    ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; Yes        ; |CoinCharger|DisCounter:DisCounter|time_left[10]    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CoinCharger|DisCounter:DisCounter|display[28]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CoinCharger|D_Controller:D_Controller|prev_N_in[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CoinCharger|DisCounter:DisCounter|Ds_2[0]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CoinCharger|DisCounter:DisCounter|Ds_1[0]          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CoinCharger|D_Controller:D_Controller|digit1[2]    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |CoinCharger|DisCounter:DisCounter|time_left[1]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |CoinCharger|scanner:Scanner|r1                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |CoinCharger|DisCounter:DisCounter|encoded          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |CoinCharger|DisCounter:DisCounter|encoded          ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; No         ; |CoinCharger|mux:mux1|Y[3]                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DisCounter:DisCounter|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                      ;
+; LPM_WIDTHD             ; 5              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_fbo ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DisCounter:DisCounter|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                      ;
+; LPM_WIDTHD             ; 32             ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_25o ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Partition Dependent Files                                                              ;
++-----------------------+-------------------+---------+----------------------------------+
+; File                  ; Location          ; Library ; Checksum                         ;
++-----------------------+-------------------+---------+----------------------------------+
+; btod.vhd              ; Project Directory ; work    ; d5275227633604bd021959dc258f6dde ;
+; charge_music_play.vhd ; Project Directory ; work    ; 49b69a684cfb69ca09c46c2fa6b0b85c ;
+; coin.vhd              ; Project Directory ; work    ; c5d8c45ed2e410ed32573237a360a381 ;
+; CoinCharger.bdf       ; Project Directory ; work    ; fbe4a88902f37d21baca75b0e23e9f93 ;
+; d_controller.vhd      ; Project Directory ; work    ; 28dab2c8acd0a5ec71f4204b3b70899c ;
+; discounter.vhd        ; Project Directory ; work    ; 846bc042890dc22c213b66291e7fbd97 ;
+; keyborad.vhd          ; Project Directory ; work    ; c29e78fcdeda80500da37031df21ec96 ;
+; m1.vhd                ; Project Directory ; work    ; 3752e6dc0babd1d76be38c891bbb6744 ;
+; mux.vhd               ; Project Directory ; work    ; 201c5e80f7fb69197b1d776082c883a0 ;
+; Scanner.vhd           ; Project Directory ; work    ; 98a5aa6ef62b7e8122ce38ae79b6b3e7 ;
+; switch.vhd            ; Project Directory ; work    ; 27c94d652f7eca5c66ac7e086dd02427 ;
+; Timer.vhd             ; Project Directory ; work    ; 99a4f38328cd9f74e476dba5cdd4fa33 ;
+; to2.vhd               ; Project Directory ; work    ; 4666eea82f15b4838a677b7d069a259d ;
+; Translate.vhd         ; Project Directory ; work    ; 041f8b6bc993eae9dbddaa9a48f4d8e7 ;
+; true_four_4_pai.vhd   ; Project Directory ; work    ; ecd91f4bc1a379118bc03291506f7e9e ;
++-----------------------+-------------------+---------+----------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 38                          ;
+; cycloneiii_ff         ; 240                         ;
+;     CLR               ; 2                           ;
+;     ENA               ; 51                          ;
+;     SCLR              ; 33                          ;
+;     SLD               ; 27                          ;
+;     plain             ; 127                         ;
+; cycloneiii_lcell_comb ; 2786                        ;
+;     arith             ; 935                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 232                         ;
+;         3 data inputs ; 701                         ;
+;     normal            ; 1851                        ;
+;         0 data inputs ; 61                          ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 771                         ;
+;         3 data inputs ; 117                         ;
+;         4 data inputs ; 887                         ;
+;                       ;                             ;
+; Max LUT depth         ; 130.20                      ;
+; Average LUT depth     ; 91.42                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------------------------------+
+; Source assignments for sld_signaltap:auto_signaltap_0 ;
++-----------------+-------+------+----------------------+
+; Assignment      ; Value ; From ; To                   ;
++-----------------+-------+------+----------------------+
+; MESSAGE_DISABLE ; 13410 ; -    ; -                    ;
++-----------------+-------+------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0                                                                                                                                               ;
++-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+; Parameter Name                                  ; Value                                                                                                                                                      ; Type           ;
++-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+; lpm_type                                        ; sld_signaltap                                                                                                                                              ; String         ;
+; sld_node_info                                   ; 805334528                                                                                                                                                  ; Untyped        ;
+; SLD_SECTION_ID                                  ; hdl_signaltap_0                                                                                                                                            ; String         ;
+; SLD_IP_VERSION                                  ; 6                                                                                                                                                          ; Signed Integer ;
+; SLD_IP_MINOR_VERSION                            ; 0                                                                                                                                                          ; Signed Integer ;
+; SLD_COMMON_IP_VERSION                           ; 0                                                                                                                                                          ; Signed Integer ;
+; sld_data_bits                                   ; 45                                                                                                                                                         ; Untyped        ;
+; sld_trigger_bits                                ; 45                                                                                                                                                         ; Untyped        ;
+; SLD_NODE_CRC_BITS                               ; 32                                                                                                                                                         ; Signed Integer ;
+; SLD_NODE_CRC_HIWORD                             ; 41394                                                                                                                                                      ; Signed Integer ;
+; SLD_NODE_CRC_LOWORD                             ; 50132                                                                                                                                                      ; Signed Integer ;
+; sld_incremental_routing                         ; 1                                                                                                                                                          ; Untyped        ;
+; sld_sample_depth                                ; 128                                                                                                                                                        ; Untyped        ;
+; sld_segment_size                                ; 32                                                                                                                                                         ; Untyped        ;
+; sld_ram_block_type                              ; AUTO                                                                                                                                                       ; Untyped        ;
+; sld_state_bits                                  ; 11                                                                                                                                                         ; Untyped        ;
+; sld_buffer_full_stop                            ; 1                                                                                                                                                          ; Untyped        ;
+; SLD_MEM_ADDRESS_BITS                            ; 7                                                                                                                                                          ; Signed Integer ;
+; SLD_DATA_BIT_CNTR_BITS                          ; 4                                                                                                                                                          ; Signed Integer ;
+; sld_trigger_level                               ; 1                                                                                                                                                          ; Untyped        ;
+; sld_trigger_in_enabled                          ; 0                                                                                                                                                          ; Untyped        ;
+; SLD_HPS_TRIGGER_IN_ENABLED                      ; 0                                                                                                                                                          ; Signed Integer ;
+; SLD_HPS_TRIGGER_OUT_ENABLED                     ; 0                                                                                                                                                          ; Signed Integer ;
+; SLD_HPS_EVENT_ENABLED                           ; 0                                                                                                                                                          ; Signed Integer ;
+; SLD_HPS_EVENT_ID                                ; 0                                                                                                                                                          ; Signed Integer ;
+; sld_advanced_trigger_entity                     ; basic,1,                                                                                                                                                   ; Untyped        ;
+; sld_trigger_level_pipeline                      ; 1                                                                                                                                                          ; Untyped        ;
+; sld_trigger_pipeline                            ; 0                                                                                                                                                          ; Untyped        ;
+; sld_ram_pipeline                                ; 0                                                                                                                                                          ; Untyped        ;
+; sld_counter_pipeline                            ; 0                                                                                                                                                          ; Untyped        ;
+; sld_enable_advanced_trigger                     ; 0                                                                                                                                                          ; Untyped        ;
+; SLD_ADVANCED_TRIGGER_1                          ; NONE                                                                                                                                                       ; String         ;
+; SLD_ADVANCED_TRIGGER_2                          ; NONE                                                                                                                                                       ; String         ;
+; SLD_ADVANCED_TRIGGER_3                          ; NONE                                                                                                                                                       ; String         ;
+; SLD_ADVANCED_TRIGGER_4                          ; NONE                                                                                                                                                       ; String         ;
+; SLD_ADVANCED_TRIGGER_5                          ; NONE                                                                                                                                                       ; String         ;
+; SLD_ADVANCED_TRIGGER_6                          ; NONE                                                                                                                                                       ; String         ;
+; SLD_ADVANCED_TRIGGER_7                          ; NONE                                                                                                                                                       ; String         ;
+; SLD_ADVANCED_TRIGGER_8                          ; NONE                                                                                                                                                       ; String         ;
+; SLD_ADVANCED_TRIGGER_9                          ; NONE                                                                                                                                                       ; String         ;
+; SLD_ADVANCED_TRIGGER_10                         ; NONE                                                                                                                                                       ; String         ;
+; sld_inversion_mask_length                       ; 154                                                                                                                                                        ; Untyped        ;
+; sld_inversion_mask                              ; 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; Untyped        ;
+; sld_power_up_trigger                            ; 0                                                                                                                                                          ; Untyped        ;
+; SLD_STATE_FLOW_MGR_ENTITY                       ; state_flow_mgr_entity.vhd                                                                                                                                  ; String         ;
+; sld_state_flow_use_generated                    ; 0                                                                                                                                                          ; Untyped        ;
+; sld_current_resource_width                      ; 1                                                                                                                                                          ; Untyped        ;
+; sld_attribute_mem_mode                          ; OFF                                                                                                                                                        ; Untyped        ;
+; sld_storage_qualifier_bits                      ; 45                                                                                                                                                         ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_GAP_RECORD                ; 0                                                                                                                                                          ; Signed Integer ;
+; SLD_STORAGE_QUALIFIER_MODE                      ; OFF                                                                                                                                                        ; String         ;
+; SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION ; 0                                                                                                                                                          ; Signed Integer ;
+; sld_storage_qualifier_inversion_mask_length     ; 0                                                                                                                                                          ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_ADVANCED_CONDITION_ENTITY ; basic                                                                                                                                                      ; String         ;
+; SLD_STORAGE_QUALIFIER_PIPELINE                  ; 0                                                                                                                                                          ; Signed Integer ;
+; SLD_CREATE_MONITOR_INTERFACE                    ; 0                                                                                                                                                          ; Signed Integer ;
+; SLD_USE_JTAG_SIGNAL_ADAPTER                     ; 1                                                                                                                                                          ; Signed Integer ;
++-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Tap Logic Analyzer Settings                                                                                                                                                                                                                                      ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; Instance Index ; Instance Name    ; Trigger Input Width ; Data Input Width ; Sample Depth ; Segments ; Storage Qualifier Type ; Trigger Flow Control ; Trigger Conditions ; Advanced Trigger Conditions ; Trigger In Used ; Trigger Out Used ; Power-Up Trigger Enabled ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; 0              ; auto_signaltap_0 ; 45                  ; 45               ; 128          ; 4        ; continuous             ; sequential           ; 1                  ; 0                           ; no              ; no               ; no                       ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Fri May 24 09:09:41 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CoinCharger -c CoinCharger
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file translate.vhd
+    Info (12022): Found design unit 1: Translate-basic File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 11
+    Info (12023): Found entity 1: Translate File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
+    Info (12022): Found design unit 1: Timer-behavior File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Timer.vhd Line: 13
+    Info (12023): Found entity 1: Timer File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Timer.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file switch.vhd
+    Info (12022): Found design unit 1: switch-Behavioral File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/switch.vhd Line: 13
+    Info (12023): Found entity 1: switch File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/switch.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file scanner.vhd
+    Info (12022): Found design unit 1: scanner-scan File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Scanner.vhd Line: 11
+    Info (12023): Found entity 1: scanner File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Scanner.vhd Line: 4
+Warning (12090): Entity "mux" obtained from "mux.vhd" instead of from Quartus Prime megafunction library File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/mux.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
+    Info (12022): Found design unit 1: mux-Behavioral File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/mux.vhd Line: 13
+    Info (12023): Found entity 1: mux File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/mux.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file keyborad.vhd
+    Info (12022): Found design unit 1: keyborad-behavior File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 20
+    Info (12023): Found entity 1: keyborad File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file coincharger.bdf
+    Info (12023): Found entity 1: CoinCharger
+Info (12127): Elaborating entity "CoinCharger" for the top level hierarchy
+Info (12128): Elaborating entity "Translate" for hierarchy "Translate:Trans1"
+Warning (10631): VHDL Process Statement warning at Translate.vhd(13): inferring latch(es) for signal or variable "a", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Warning (10631): VHDL Process Statement warning at Translate.vhd(13): inferring latch(es) for signal or variable "b", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Warning (10631): VHDL Process Statement warning at Translate.vhd(13): inferring latch(es) for signal or variable "c", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Warning (10631): VHDL Process Statement warning at Translate.vhd(13): inferring latch(es) for signal or variable "d", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Warning (10631): VHDL Process Statement warning at Translate.vhd(13): inferring latch(es) for signal or variable "e", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Warning (10631): VHDL Process Statement warning at Translate.vhd(13): inferring latch(es) for signal or variable "f", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Warning (10631): VHDL Process Statement warning at Translate.vhd(13): inferring latch(es) for signal or variable "g", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Info (10041): Inferred latch for "g" at Translate.vhd(13) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Info (10041): Inferred latch for "f" at Translate.vhd(13) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Info (10041): Inferred latch for "e" at Translate.vhd(13) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Info (10041): Inferred latch for "d" at Translate.vhd(13) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Info (10041): Inferred latch for "c" at Translate.vhd(13) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Info (10041): Inferred latch for "b" at Translate.vhd(13) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Info (10041): Inferred latch for "a" at Translate.vhd(13) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Translate.vhd Line: 13
+Warning (12125): Using design file discounter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: DisCounter-discount File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/discounter.vhd Line: 14
+    Info (12023): Found entity 1: DisCounter File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/discounter.vhd Line: 5
+Info (12128): Elaborating entity "DisCounter" for hierarchy "DisCounter:DisCounter"
+Info (12128): Elaborating entity "Timer" for hierarchy "Timer:Timer"
+Warning (10540): VHDL Signal Declaration warning at Timer.vhd(18): used explicit default value for signal "N_50" because signal was never assigned a value File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Timer.vhd Line: 18
+Warning (10540): VHDL Signal Declaration warning at Timer.vhd(19): used explicit default value for signal "N_1" because signal was never assigned a value File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/Timer.vhd Line: 19
+Info (12128): Elaborating entity "switch" for hierarchy "switch:switch2"
+Warning (10036): Verilog HDL or VHDL warning at switch.vhd(14): object "prev_signal" assigned a value but never read File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/switch.vhd Line: 14
+Info (12128): Elaborating entity "keyborad" for hierarchy "keyborad:keyborad"
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(59): signal "c1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 59
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(60): signal "c2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(61): signal "c3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(62): signal "c4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 62
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(68): signal "c4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 68
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(69): signal "c3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(70): signal "c2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 70
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(71): signal "c1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(77): signal "c4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(78): signal "c3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(79): signal "c2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(80): signal "c1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at keyborad.vhd(100): signal "c4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 100
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "start", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N3", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N2", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N1", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N4", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N5", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N6", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "confirm", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N7", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N8", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N9", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "reset", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Warning (10631): VHDL Process Statement warning at keyborad.vhd(55): inferring latch(es) for signal or variable "N0", which holds its previous value in one or more paths through the process File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N0" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "reset" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N9" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N8" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N7" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "confirm" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N6" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N5" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N4" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N1" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N2" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "N3" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (10041): Inferred latch for "start" at keyborad.vhd(55) File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/keyborad.vhd Line: 55
+Info (12128): Elaborating entity "scanner" for hierarchy "scanner:Scanner"
+Warning (12125): Using design file d_controller.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: D_Controller-Combinational File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/d_controller.vhd Line: 12
+    Info (12023): Found entity 1: D_Controller File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/d_controller.vhd Line: 4
+Info (12128): Elaborating entity "D_Controller" for hierarchy "D_Controller:D_Controller"
+Info (12128): Elaborating entity "mux" for hierarchy "mux:mux1"
+Warning (12125): Using design file btod.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: BtoD-BtD File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/btod.vhd Line: 11
+    Info (12023): Found entity 1: BtoD File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/btod.vhd Line: 4
+Info (12128): Elaborating entity "BtoD" for hierarchy "BtoD:BtoD"
+Warning (12125): Using design file to2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: TO2-behavior File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/to2.vhd Line: 11
+    Info (12023): Found entity 1: TO2 File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/to2.vhd Line: 5
+Info (12128): Elaborating entity "TO2" for hierarchy "TO2:TO2"
+Warning (10540): VHDL Signal Declaration warning at to2.vhd(13): used explicit default value for signal "N_i" because signal was never assigned a value File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/to2.vhd Line: 13
+Warning (12125): Using design file coin.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Coin-behavior File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/coin.vhd Line: 12
+    Info (12023): Found entity 1: Coin File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/coin.vhd Line: 5
+Info (12128): Elaborating entity "Coin" for hierarchy "Coin:Coin1"
+Warning (12125): Using design file m1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: M1-behavior File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/m1.vhd Line: 11
+    Info (12023): Found entity 1: M1 File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/m1.vhd Line: 5
+Info (12128): Elaborating entity "M1" for hierarchy "M1:M1-1"
+Warning (10540): VHDL Signal Declaration warning at m1.vhd(13): used explicit default value for signal "N_i" because signal was never assigned a value File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/m1.vhd Line: 13
+Warning (12125): Using design file charge_music_play.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: CHARGE_MUSIC_PLAY-music File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/charge_music_play.vhd Line: 14
+    Info (12023): Found entity 1: CHARGE_MUSIC_PLAY File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/charge_music_play.vhd Line: 6
+Info (12128): Elaborating entity "CHARGE_MUSIC_PLAY" for hierarchy "CHARGE_MUSIC_PLAY:CMF1"
+Warning (12125): Using design file true_four_4_pai.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: true_four_4_pai-behavior File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/true_four_4_pai.vhd Line: 11
+    Info (12023): Found entity 1: true_four_4_pai File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/true_four_4_pai.vhd Line: 5
+Info (12128): Elaborating entity "true_four_4_pai" for hierarchy "true_four_4_pai:TF41"
+Warning (10540): VHDL Signal Declaration warning at true_four_4_pai.vhd(13): used explicit default value for signal "N_i" because signal was never assigned a value File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/true_four_4_pai.vhd Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vf14.tdf
+    Info (12023): Found entity 1: altsyncram_vf14 File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/altsyncram_vf14.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_h7c.tdf
+    Info (12023): Found entity 1: mux_h7c File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/mux_h7c.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_6af.tdf
+    Info (12023): Found entity 1: decode_6af File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/decode_6af.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_brh.tdf
+    Info (12023): Found entity 1: cntr_brh File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cntr_brh.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_irb.tdf
+    Info (12023): Found entity 1: cmpr_irb File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cmpr_irb.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_8hi.tdf
+    Info (12023): Found entity 1: cntr_8hi File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cntr_8hi.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_0rh.tdf
+    Info (12023): Found entity 1: cntr_0rh File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cntr_0rh.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_grb.tdf
+    Info (12023): Found entity 1: cmpr_grb File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cmpr_grb.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_sdi.tdf
+    Info (12023): Found entity 1: cntr_sdi File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/cntr_sdi.tdf Line: 25
+Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
+Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
+Info (11172): 2024.05.24.09:09:55 Progress: Loading sld5b11b44d/alt_sld_fab_wrapper_hw.tcl
+Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
+Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
+Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
+Info (11172): Presplit: "alt_sld_fab" instantiated altera_super_splitter "presplit"
+Info (11172): Splitter: "alt_sld_fab" instantiated altera_sld_splitter "splitter"
+Info (11172): Sldfabric: "alt_sld_fab" instantiated altera_sld_jtag_hub "sldfabric"
+Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification_hub "ident"
+Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
+Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld5b11b44d/alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_ident.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: D:/myApps/DELL/OneDrive/Desktop/shudian/newcoin/Coinni/CoinCharger/db/ip/sld5b11b44d/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Info (12206): 0 design partitions require synthesis
+Info (12208): 3 design partitions do not require synthesis
+    Info (12229): Partition "Top" does not require synthesis because there were no relevant design changes
+    Info (12229): Partition "sld_signaltap:auto_signaltap_0" does not require synthesis because there were no relevant design changes
+    Info (12229): Partition "sld_hub:auto_hub" does not require synthesis because there were no relevant design changes
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Fri May 24 09:10:03 2024
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:10
+
+

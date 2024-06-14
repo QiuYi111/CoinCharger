@@ -1,0 +1,45 @@
+# do CoinCharger.do
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:33:45 on May 15,2024
+# vcom -work work CoinCharger.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity CoinCharger
+# -- Compiling architecture structure of CoinCharger
+# End time: 21:33:45 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:33:45 on May 15,2024
+# vcom -work work Waveform.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CoinCharger_vhd_vec_tst
+# -- Compiling architecture CoinCharger_arch of CoinCharger_vhd_vec_tst
+# End time: 21:33:45 on May 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CoinCharger_vhd_vec_tst 
+# Start time: 21:33:46 on May 15,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.coincharger_vhd_vec_tst(coincharger_arch)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.coincharger(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# after#30
+# End time: 21:33:47 on May 15,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

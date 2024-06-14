@@ -1,0 +1,40 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity Timer is
+    port(
+    clk_i:IN STD_LOGIC;
+    clk_50,clk_1:OUT STD_LOGIC);
+end Timer;
+
+architecture behavior of Timer is
+signal count1:STD_LOGIC_VECTOR(24 DOWNTO 0):="0000000000000000000000001";
+signal count2:STD_LOGIC_VECTOR(24 DOWNTO 0):="0000000000000000000000001";
+signal clk_temp_50:STD_LOGIC:='0';
+signal clk_temp_1:STD_LOGIC:='0';
+signal N_50 :STD_LOGIC_VECTOR(25 DOWNTO 0) := "00000011110100001001000000";
+signal N_1:STD_LOGIC_VECTOR(25 DOWNTO 0):="10111110101111000010000000";
+begin
+    process(clk_i)
+    begin
+        if(clk_i'EVENT and clk_i='1')then  
+            if (count1=N_50) then
+                count1<="0000000000000000000000001";
+                clk_temp_50<='1';
+            else
+                count1<=count1+1;
+                clk_temp_50<='0';
+            end if;
+            if (count2=N_1)then
+                count2<="0000000000000000000000001";
+                clk_temp_1<='1';
+            else
+                count2<=count2+1;
+                clk_temp_1<='0';
+            end if;
+        end if;
+    end process;--might have bugs    
+    clk_1<=clk_temp_1;
+    clk_50<=clk_temp_50;
+end behavior;

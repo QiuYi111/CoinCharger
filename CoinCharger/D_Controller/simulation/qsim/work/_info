@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Administrator\Desktop\lastCoinCharger(1)\CoinCharger\D_Controller\simulation\qsim
+vD_Controller
+Z1 IOORIJbf^e^P2B0jg>Q:@V3
+Z2 VJmNK3CL=3[^HjamEzMhNn3
+Z3 dC:\Users\Administrator\Desktop\lastCoinCharger(1)\CoinCharger\D_Controller\simulation\qsim
+Z4 w1718328727
+Z5 8D_Controller.vo
+Z6 FD_Controller.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@d_@controller
+!i10b 1
+Z10 !s100 UPd?d;F[9=FM[le0;ZIVc0
+!s85 0
+Z11 !s108 1718328727.525000
+Z12 !s107 D_Controller.vo|
+Z13 !s90 -work|work|D_Controller.vo|
+!s101 -O0
+vD_Controller_vlg_check_tst
+!i10b 1
+!s100 GKF^?]5dIQ7@mj<lIP4_02
+IMXza`:DZ6]HaEObjmhdkG1
+V`kZnz@6m8OjDTQd5gkOEF3
+R3
+Z14 w1718328726
+Z15 8D_Controller.vt
+Z16 FD_Controller.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z17 !s108 1718328727.557000
+Z18 !s107 D_Controller.vt|
+Z19 !s90 -work|work|D_Controller.vt|
+!s101 -O0
+R8
+n@d_@controller_vlg_check_tst
+vD_Controller_vlg_sample_tst
+!i10b 1
+!s100 KaFC02Ugh55VSH@`lk2QL3
+IokRcBK4kk7B`mL8f_oU]L2
+V9nifUmhHQ8ZC9jVGN6S<`1
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@d_@controller_vlg_sample_tst
+vD_Controller_vlg_vec_tst
+!i10b 1
+!s100 HVPCSkQKJF4lz6>>07_^=0
+IM_>8WCFJgYEVNn?]ZL^WM0
+VF7:EV_H<?NOlP>UWiU@6<1
+R3
+R14
+R15
+R16
+L0 289
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@d_@controller_vlg_vec_tst
