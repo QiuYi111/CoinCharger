@@ -13,6 +13,11 @@
         8.  [mux](#org93442d8)
         9.  [switch](#orgdfa152d)
     2.  [蜂鸣器部分](#orgb52f530)
+        1. [CHARGE_MUSIC_PLAY](#orgcmp64546)
+        2. [M1](#orgm11m)
+        3. [To2](#orgto2ot)
+        4. [true_four_4_pai](#orgtf4p4413)
+        5. [coin](#orgcoinioc)
 
 
 <a id="orgc04b52a"></a>
@@ -95,3 +100,34 @@
 
 ## 蜂鸣器部分
 
+<a id="orgcmp64546"></a>
+
+### CHARGE_MUSIC_PLAY
+本元件主要实现以下功能：
+
+- 将输入信号根据节拍转化为分频器的分频依据（称为N_i）
+- 根据音乐节拍和简谱储存音乐，每接收到一个上升沿就输出下一个音符。
+
+<a id="orgm11m"></a>
+
+### M1
+
+本元件为分频器，主要用于将输入频率25分频
+
+<a id="orgto2ot"></a>
+
+###  To2
+
+本原件为分频器，主要用于将输入2分频
+
+<a id="orgtf4p4413"></a>
+
+### ture_four_4_pai
+
+分频器，主要用于将信号4分频
+
+<a id="orgcoinioc"></a>
+
+### Coin
+
+分频器，根据前端N_i接收到的分频依据对蜂鸣器的输入信号进行分频
