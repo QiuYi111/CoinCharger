@@ -153,7 +153,7 @@
 
 ### 移位寄存器-D​\_​Controller
 
-![img](./Simulation/D_Controller.png)
+![img](./Simulation/D_Controlller.png)
 随机输入，得到了移位的正确输出结果，且元件能够实现存储，复位功能正常。
 本元件功能正常可用。
 
