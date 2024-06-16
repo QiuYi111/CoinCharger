@@ -51,7 +51,7 @@
 ![img](./state&design/design.png)
 
 ## 状态转换图
-![img](./state&design/states.png)
+![img](./state&design/states1.png)
 
 如图所示，状态转换图中，各状态描述如下：
 
