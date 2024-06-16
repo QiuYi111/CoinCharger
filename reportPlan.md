@@ -1,106 +1,106 @@
 
 # Table of Contents
 
-1.  [预习报告 jh](#org92b1183)
-    1.  [画出电路整体框图，注明各功能模块和引脚](#orgb90051b)
-    2.  [画出控制电路核心的状态转换图](#org48aa3d0)
-2.  [设计思路](#orgbc76fb5)
-    1.  [键盘和显示部分设计思路 qy](#org81a689b)
-    2.  [蜂鸣器的设计思路 jh](#org0aec01b)
-3.  [状态转换图及其分析说明 qy](#org10a3689)
-4.  [仿真波形及其分析说明](#org8cfe382)
-    1.  [BtoD qy](#orga0c202e)
-    2.  [DController qy](#org31743b0)
-    3.  [keyboard qy](#org2ba0410)
-    4.  [mux qy](#orgf9d97d2)
-    5.  [scanner qy](#org37122cf)
-    6.  [TO\_​2 jh](#org171b8f5)
-    7.  [Translate qy](#orgc0b87a0)
-    8.  [True-for-4   jh](#orgbaff4ab)
-5.  [设计和调试中遇到的问题及其解决方法 qy+jh1](#orgfe32da2)
+1.  [预习报告 jh](#org9e3d7d4)
+    1.  [画出电路整体框图，注明各功能模块和引脚](#orga867634)
+    2.  [画出控制电路核心的状态转换图](#org5c02f6b)
+2.  [设计思路](#org424ada1)
+    1.  [键盘和显示部分设计思路 qy](#org04259ed)
+    2.  [蜂鸣器的设计思路 jh](#org9da9770)
+3.  [状态转换图及其分析说明 qy](#org9d7640e)
+4.  [仿真波形及其分析说明](#org4e80709)
+    1.  [BtoD qy](#orgaaab082)
+    2.  [DController qy](#org09b257c)
+    3.  [keyboard qy](#orgc69ee4f)
+    4.  [mux qy](#org0542eca)
+    5.  [scanner qy](#orgfc4be66)
+    6.  [TO\_​2 jh](#org227eef9)
+    7.  [Translate qy](#org3650d04)
+    8.  [True-for-4   jh](#orgdb3b2bb)
+5.  [设计和调试中遇到的问题及其解决方法 qy+jh1](#orgaf1ebde)
 
 
-<a id="org92b1183"></a>
+<a id="org9e3d7d4"></a>
 
 # TODO 预习报告 jh
 
 
-<a id="orgb90051b"></a>
+<a id="orga867634"></a>
 
 ## TODO 画出电路整体框图，注明各功能模块和引脚
 
 
-<a id="org48aa3d0"></a>
+<a id="org5c02f6b"></a>
 
 ## TODO 画出控制电路核心的状态转换图
 
 
-<a id="orgbc76fb5"></a>
+<a id="org424ada1"></a>
 
 # TODO 设计思路
 
 
-<a id="org81a689b"></a>
+<a id="org04259ed"></a>
 
-## TODO 键盘和显示部分设计思路 qy
+## DONE 键盘和显示部分设计思路 qy
 
 
-<a id="org0aec01b"></a>
+<a id="org9da9770"></a>
 
 ## TODO 蜂鸣器的设计思路 jh
 
 
-<a id="org10a3689"></a>
+<a id="org9d7640e"></a>
 
-# TODO 状态转换图及其分析说明 qy
+# WAITING 状态转换图及其分析说明 qy
 
 
-<a id="org8cfe382"></a>
+<a id="org4e80709"></a>
 
 # TODO 仿真波形及其分析说明
 
 
-<a id="orga0c202e"></a>
+<a id="orgaaab082"></a>
 
-## TODO BtoD qy
-
-
-<a id="org31743b0"></a>
-
-## TODO DController qy
+## DONE BtoD qy
 
 
-<a id="org2ba0410"></a>
+<a id="org09b257c"></a>
 
-## TODO keyboard qy
-
-
-<a id="orgf9d97d2"></a>
-
-## TODO mux qy
+## DONE DController qy
 
 
-<a id="org37122cf"></a>
+<a id="orgc69ee4f"></a>
 
-## TODO scanner qy
+## DONE keyboard qy
 
 
-<a id="org171b8f5"></a>
+<a id="org0542eca"></a>
+
+## DONE mux qy
+
+
+<a id="orgfc4be66"></a>
+
+## DONE scanner qy
+
+
+<a id="org227eef9"></a>
 
 ## TODO TO\_​2 jh
 
 
-<a id="orgc0b87a0"></a>
+<a id="org3650d04"></a>
 
-## TODO Translate qy
+## DONE Translate qy
 
 
-<a id="orgbaff4ab"></a>
+<a id="orgdb3b2bb"></a>
 
 ## TODO True-for-4   jh
 
 
-<a id="orgfe32da2"></a>
+<a id="orgaf1ebde"></a>
 
 # TODO 设计和调试中遇到的问题及其解决方法 qy+jh1
 
