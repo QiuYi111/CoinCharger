@@ -126,7 +126,7 @@
 
 ### 扫描信号发生器-Scanner
 
-![img](./Simulation/Scanner.png)
+![img](./Simulation/scanner.png)
 输入时钟后，依次在各个端口(r1-r4)输出一个周期的高电平信号。
 本元件功能正常可用。
 
