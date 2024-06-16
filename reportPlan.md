@@ -22,22 +22,22 @@
 
 <a id="org9e3d7d4"></a>
 
-# TODO 预习报告 jh
+# DONE 预习报告 jh
 
 
 <a id="orga867634"></a>
 
-## TODO 画出电路整体框图，注明各功能模块和引脚
+## DONE 画出电路整体框图，注明各功能模块和引脚
 
 
 <a id="org5c02f6b"></a>
 
-## TODO 画出控制电路核心的状态转换图
+## DONE 画出控制电路核心的状态转换图
 
 
 <a id="org424ada1"></a>
 
-# TODO 设计思路
+# DONE 设计思路
 
 
 <a id="org04259ed"></a>
@@ -47,7 +47,7 @@
 
 <a id="org9da9770"></a>
 
-## TODO 蜂鸣器的设计思路 jh
+## DONE 蜂鸣器的设计思路 jh
 
 
 <a id="org9d7640e"></a>
