@@ -113,3 +113,65 @@
 ### Coin
 
 分频器，根据前端N_i接收到的分频依据对蜂鸣器的输入信号进行分频
+
+# 仿真波形及其分析说明
+
+
+<a id="org975e70d"></a>
+
+## 键盘和显示部分仿真
+
+
+<a id="org4bbddb6"></a>
+
+### 扫描信号发生器-Scanner
+
+<./Simulation/Scanner.ong>
+输入时钟后，依次在各个端口(r1-r4)输出一个周期的高电平信号。
+本元件功能正常可用。
+
+
+<a id="org18383ac"></a>
+
+### 键盘和键位绑定-keyboard
+
+![img](./Simulation/keyboard.png)
+波形中为r1-r4输入了扫描信号，并且给了随机的C1-C4信号。经检查输出与给定的按键绑定相符。
+本元件功能正常可用。
+
+
+<a id="orga6aba03"></a>
+
+### 10位二进制转4位总线-BtoD
+
+![img](./Simulation/BtoD.png)
+输入信号为10位二进制信号，对应十进制数，输出N为4位总线信号，已经编码。
+本元件功能正常可用。
+
+
+<a id="org3e65c8b"></a>
+
+### 移位寄存器-D​\_​Controller
+
+![img](./Simulation/D_Controller.png)
+随机输入，得到了移位的正确输出结果，且元件能够实现存储，复位功能正常。
+本元件功能正常可用。
+
+
+<a id="orga7a8a56"></a>
+
+### 数据选择器-mux
+
+![img](./Simulation/mux.png)
+随机设定总线输入的值，在S=1时选择B输出，而在S=0时选择A输出。
+本元件功能正常可用。
+
+
+<a id="org7dd1b96"></a>
+
+### 4位总线转数码管输出-Translate
+
+![img](./Simulation/Translate.png)
+随机给定总线输入，数码管控制对应正确。
+本元件功能正常可用。
+
