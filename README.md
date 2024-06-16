@@ -1,27 +1,4 @@
 
-# Table of Contents
-
-1.  [元件功能介绍](#orgc04b52a)
-    1.  [键盘和数码管部分](#org5cba9b1)
-        1.  [BtoD](#org4ba73cd)
-        2.  [D\_​Controller](#org43d5908)
-        3.  [DisConter](#org0a60bb1)
-        4.  [Scanner](#orgeda77e3)
-        5.  [Timer](#org6bdf9d1)
-        6.  [Translate](#orgf8e5eb3)
-        7.  [keyborad](#org41b48a3)
-        8.  [mux](#org93442d8)
-        9.  [switch](#orgdfa152d)
-    2.  [蜂鸣器部分](#orgb52f530)
-        1. [CHARGE_MUSIC_PLAY](#orgcmp64546)
-        2. [M1](#orgm11m)
-        3. [To2](#orgto2ot)
-        4. [true_four_4_pai](#orgtf4p4413)
-        5. [coin](#orgcoinioc)
-
-
-<a id="orgc04b52a"></a>
-
 # 设计思路
 
 
